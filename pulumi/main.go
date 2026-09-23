@@ -215,8 +215,8 @@ func main() {
 						"fsGroup":   pulumi.Int(1001),
 					},
 					"containerSecurityContext": pulumi.Map{
-						"enabled":                pulumi.Bool(true),
-						"runAsNonRoot":           pulumi.Bool(true),
+						"enabled":                  pulumi.Bool(true),
+						"runAsNonRoot":             pulumi.Bool(true),
 						"allowPrivilegeEscalation": pulumi.Bool(false),
 						"capabilities": pulumi.Map{
 							"drop": pulumi.StringArray{pulumi.String("ALL")},
@@ -250,17 +250,17 @@ func main() {
 			},
 			Values: pulumi.Map{
 				"auth": pulumi.Map{
-					"adminUser":          pulumi.String("admin"),
-					"existingSecret":     pulumi.String("keycloak-admin-credentials"),
-					"passwordSecretKey":  pulumi.String("admin-password"),
+					"adminUser":         pulumi.String("admin"),
+					"existingSecret":    pulumi.String("keycloak-admin-credentials"),
+					"passwordSecretKey": pulumi.String("admin-password"),
 				},
 				// Connect to our PostgreSQL deployment.
 				"externalDatabase": pulumi.Map{
-					"host":               pulumi.String("postgresql"),
-					"port":               pulumi.Int(5432),
-					"database":           pulumi.String("keycloak"),
-					"user":               pulumi.String("keycloak"),
-					"existingSecret":     pulumi.String("postgres-credentials"),
+					"host":                      pulumi.String("postgresql"),
+					"port":                      pulumi.Int(5432),
+					"database":                  pulumi.String("keycloak"),
+					"user":                      pulumi.String("keycloak"),
+					"existingSecret":            pulumi.String("postgres-credentials"),
 					"existingSecretPasswordKey": pulumi.String("password"),
 				},
 				// Disable bundled PostgreSQL — we deployed it ourselves.
@@ -311,8 +311,8 @@ func main() {
 					"fsGroup":   pulumi.Int(1001),
 				},
 				"containerSecurityContext": pulumi.Map{
-					"enabled":                pulumi.Bool(true),
-					"runAsNonRoot":           pulumi.Bool(true),
+					"enabled":                  pulumi.Bool(true),
+					"runAsNonRoot":             pulumi.Bool(true),
 					"allowPrivilegeEscalation": pulumi.Bool(false),
 					"capabilities": pulumi.Map{
 						"drop": pulumi.StringArray{pulumi.String("ALL")},

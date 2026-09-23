@@ -76,7 +76,7 @@ All inter-service communication stays inside the cluster. PostgreSQL is never re
 ## Quick Start
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/keycloak-kubernetes-pulumi
+git clone https://github.com/sarthak24shirbhate/keycloak-kubernetes-pulumi.git
 cd keycloak-kubernetes-pulumi
 
 # 1. Ensure Docker Desktop is running (whale icon in system tray)
@@ -280,7 +280,7 @@ None of these production controls are implemented in this repository — they ar
 
 ## Time Spent
 
-Approximate implementation effort: **6–8 hours**
+Estimated implementation effort: approximately 6–8 hours.
 
 | Phase | Time |
 |-------|------|
