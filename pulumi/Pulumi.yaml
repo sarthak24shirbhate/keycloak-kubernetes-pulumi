@@ -1,0 +1,10 @@
+name: keycloak-kubernetes-pulumi
+runtime: go
+description: >
+  Keycloak on Kubernetes — local dev IaC using Pulumi + Go.
+  Manages namespace, secrets, TLS, PostgreSQL, Keycloak, ingress, and NetworkPolicy.
+config:
+  namespace:
+    default: keycloak
+  hostname:
+    default: keycloak.local

@@ -1,0 +1,6 @@
+config:
+  keycloak-kubernetes-pulumi:namespace: keycloak
+  keycloak-kubernetes-pulumi:hostname: keycloak.local
+  # Copy this file to Pulumi.dev.yaml and set real secrets:
+  # pulumi config set --secret keycloakAdminPassword <password>
+  # pulumi config set --secret postgresPassword <password>

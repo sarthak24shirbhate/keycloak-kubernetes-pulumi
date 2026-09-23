@@ -1,0 +1,48 @@
+# Keycloak Kubernetes IaC — .gitignore
+
+# ── Pulumi ────────────────────────────────────────────────────────────────
+# Local state backend — contains encrypted secrets, do NOT commit
+.pulumi-state/
+# Pulumi stack configs with actual secrets — only commit .yaml.example
+pulumi/Pulumi.dev.yaml
+pulumi/Pulumi.staging.yaml
+pulumi/Pulumi.prod.yaml
+
+# ── Certificates & Keys ───────────────────────────────────────────────────
+# Generated certs are excluded. The Pulumi code generates them in-memory.
+certs/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# ── Go ────────────────────────────────────────────────────────────────────
+# Build artifacts
+pulumi/*.exe
+pulumi/main
+# Temporary Go test files
+*.test
+
+# ── Kubernetes / kubeconfig ───────────────────────────────────────────────
+kubeconfig
+.kube/
+*.kubeconfig
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Temporary ─────────────────────────────────────────────────────────────
+tmp/
+temp/
+.tmp/
